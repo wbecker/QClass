@@ -21,7 +21,7 @@ QClass.mixin = function (base, extras) {
     }
   }
 };
-QClass.child = function (Parent, classData) {
+QClass.extend = function (Parent, classData) {
   var Child = function () {
     Parent.apply(this, arguments);
   };

@@ -4,7 +4,7 @@ InheritanceTest = TestCase("Test Inheritance", {
       fn: function () {},
       value: "a value"
     });
-    var Child = QClass.child(Parent);
+    var Child = QClass.extend(Parent);
     childInstance = new Child();
     assertFunction("function is inherited", childInstance.fn);
     assertString("value is inherited", childInstance.value);
