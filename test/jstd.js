@@ -10,15 +10,15 @@ InheritanceTest = TestCase("Test Inheritance", {
   testOverriding: function (){
     var Parent = new QClass ({
       fn: function () {
-        return 0;
+        return 1;
       }
     });
     var Child = QClass.child(Parent, {
       fn: function () {
-        return 1;
+        return QClass.Super(arguments) + 2;
       }
     });
     childInstance = new Child();
-    assertEquals("Child function is called", 1, childInstance.fn());
+    assertEquals("Child function is called", 3, childInstance.fn());
   }
 });
