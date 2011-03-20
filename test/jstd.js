@@ -15,7 +15,7 @@ InheritanceTest = TestCase("Test Inheritance", {
         return 1;
       }
     });
-    var Child = QClass.child(Parent, {
+    var Child = QClass.extend(Parent, {
       fn: function () {
         return QClass.Super(arguments) + 2;
       }
