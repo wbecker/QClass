@@ -86,4 +86,7 @@ YUI().use("console", function (Y) {
   TestRunner.attach(TestRunner.TEST_IGNORE_EVENT, logEvent);
   //run the tests
   TestRunner.run();
+  setTimeout(function () {
+    console.log(TestRunner.getResults(YUITest.TestFormat.JUnitXML));
+  }, 1000);
 });
